@@ -1,0 +1,5 @@
+{
+  "name":"console",
+  "main":"console.js",
+  "description":"打印信息"
+}

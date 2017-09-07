@@ -1,0 +1,19 @@
+<%for(var i=0;i<list.length;i++){var json=list[i];%>
+<div class="module-0112">
+  <div class="clearfix">
+    <div class="module-info">
+      <p class="module-title text-overflow"><%=json.title%></p>
+      <p class="module-price">礼包价 : <span>¥<%=json.discountPriceYuanString%></span></p>
+      <p class="module-discount">总原价 : ¥<%=json.priceYuanString%></p>
+      <a item-id="<%=json.itemId%>" sku-id="<%=json.sku%>" class="module-buy" href="javascript:void(0)">立即购买</a>
+    </div>
+    <a href="javascript:void(0)" detail="<%=json.itemId%>"><img class="module-img loading" src="<%=json.picUrl%>" /></a>
+  </div>
+  <div class="module-memo clearfix">
+    <%if(json.desc)for(var j=0;j<json.desc.length;j++){%>
+    <span><i>●</i><%=json.desc[j]%></span>
+    <%}%>
+  </div>
+</div>
+<div class="module-0112-split"></div>
+<%}%>

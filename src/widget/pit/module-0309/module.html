@@ -1,0 +1,11 @@
+<div class="module-0309 ">
+  <% for(var i=0;i<list.length;i++){ var detail = list[i].itemSkuVOs&&list[i].itemSkuVOs[0]&&list[i].itemSkuVOs[0].saleDetailInfo%>
+    <div class="goods">
+      <img class="goods-img" src="<%=list[i].picUrl%>" />
+      <p class="goods-title"><%=list[i].title%></p>
+      <a detail="<%=list[i].itemId%>" class="goods-price" href="javascript:void(0);">
+        <span>¥<%=list[i].priceYuanString%></span> / <span><%=detail%></span>
+      </a>
+    </div>
+  <% } %>
+</div>

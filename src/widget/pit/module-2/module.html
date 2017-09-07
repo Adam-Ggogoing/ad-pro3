@@ -1,0 +1,18 @@
+<%for(var i=0;i<list.length;i++){%>
+<div class="mod-2">
+  <div class="mod-2-head">
+    <%=_.map((list[i].title||list[i].pageName).split(''),function(some){ return "<span>"+some+"</span>"; }).join('') %>
+  </div>
+  <div class="mod-2-body clearfix">
+    <% if(list[i].items) for(var j=0;j<list[i].items.length;j++) { var json=list[i].items[j];%>
+    <div class="mod-2-item">
+      <a href="javascript:void(0)" detail="<%=json.itemId%>"> <img src="<%=json.picUrl%>" class="mod-2-img loading" /></a>
+      <a href="javascript:void(0)" detail="<%=json.itemId%>" class="mod-2-title"><%=json.title%></a>
+      <p class="mod-2-price">¥<%=json.discountPriceYuanString%></p>
+      <p class="mod-2-origin">原价:<%=json.priceYuanString%></p>
+      <a href="javascript:void(0)" item-id="<%=json.itemId%>" sku-id="<%=json.sku%>" class="mod-2-buy">立即购买</a>
+    </div>
+    <% } %>
+  </div>
+</div>
+<%}%>

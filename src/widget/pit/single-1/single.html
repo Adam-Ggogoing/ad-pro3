@@ -1,0 +1,24 @@
+<div class="single-1">
+  <% for(var i=0;i<list.length;i++){ %>
+  <div class="pit-1">
+     <a href="javascript:void(0)" detail="<%=list[i].itemId%>"><img src="<%=list[i].picUrl%>" class="pit-1-img loading"></img></a>
+    <div class="pit-1-content">
+        <a href="javascript:void(0)" detail="<%=list[i].itemId%>" class="pit-1-title"><%=list[i].title%></a>
+        <p class="pit-1-subTitle"><%=list[i].subtitle%></p>
+        <p class="pit-1-price">
+          <span class="pit-1-price-1">
+            ¥<%=list[i].discountPriceYuanString%>
+          </span><span class="pit-1-price-2">
+            <%=list[i].priceYuanString%>
+          </span>
+        </p>
+        <%if(list[i].inventory>0){%>
+        <a class="pit-1-rob" item-id="<%=list[i].itemId%>" sku-id="<%=list[i].sku%>" href="javascript:void(0)">立即抢购</a>
+        <%}%>
+        <%if(list[i].itemSkuVOs&&list[i].itemSkuVOs[0]&&list[i].itemSkuVOs[0].inventory<=0){%>
+        <span class="empty">卖光啦</span>
+        <%}%>
+    </div>
+  </div>
+  <% } %>
+</div>

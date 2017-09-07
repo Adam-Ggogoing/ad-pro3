@@ -1,0 +1,5 @@
+{
+  "name":"util",
+  "main":"util.js",
+  "description":"公用函数"
+}

@@ -1,0 +1,26 @@
+
+<div class="module-1">
+  <% for(var i=0;i<list.length;i++){ var empty = list[i].itemSkuVOs&&list[i].itemSkuVOs[0]&&list[i].itemSkuVOs[0].inventory<=0;%>
+  	<div class="goods">
+  		<div class="box-img">
+  			<a href="javascript:void(0)" detail="<%=list[i].itemId%>"><img class="loading" src="<%=list[i].picUrl%>" /></a>
+  		</div>
+  		<div class="box-text">
+  			<a class="text1" href="javascript:void(0)" detail="<%=list[i].itemId%>"><%=list[i].title%></a>
+        <p class="subtitle"><%=list[i].subtitle%></p>
+  			<p class="text2"><%=list[i].amount%></p>
+  			<p class="text3">¥<%=list[i].discountPriceYuanString%></p>
+  			<p class="text4">原价:<%=list[i].priceYuanString%></p>
+        <%if(empty){%>
+        <a class="cart cart-empty" href="javascript:void(0)"></a>  
+        <%}%>
+        <%if(!empty){%>
+  			<a class="cart" item-id="<%=list[i].itemId%>" sku-id="<%=list[i].sku%>" href="javascript:void(0)"></a>
+        <%}%>
+      </div>
+      <%if(empty){%>
+        <span class="empty">卖光啦</span>
+      <%}%>
+  	</div>
+  <% } %>
+</div>

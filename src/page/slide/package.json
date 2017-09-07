@@ -1,0 +1,5 @@
+{
+  "name":"slide",
+  "description":"轮播图",
+  "main":"slide.js"
+}

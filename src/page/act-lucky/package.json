@@ -1,0 +1,5 @@
+{
+  "name":"act-lucky",
+  "main":"lucky.js",
+  "description":"抽奖活动"
+}

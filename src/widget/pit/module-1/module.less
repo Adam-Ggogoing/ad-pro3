@@ -1,0 +1,105 @@
+
+.module-1 {
+
+    .goods {
+        width: 340/@base;
+        margin: 0 /@base 10/@base 30/@base 20/@base;
+        float: left;
+        overflow: hidden;
+        background: #fff;
+        padding-bottom: 15/@base;
+        position:relative;
+        .empty{
+          position:absolute;
+          font-size: .5rem;
+          left:0;
+          right:0;
+          top:0;
+          bottom:0;
+          margin:auto;
+          padding:0;
+          width:2rem;
+          height:2rem;
+          line-height: 2rem;
+          text-align: center;
+          background-color:rgba(0,0,0,.6);
+          color:#fff;
+          border-radius:50%;
+        }
+    }
+    .box-img {
+        width: 340/@base;
+        display: block;
+        position: relative;
+        margin:0 0 10/@base;
+    }
+    .box-img img {
+        width:340/@base;
+        height: 340/@base;
+        display:block;
+        margin:0;
+    }
+    .box-text {
+        position: relative;
+        padding-left:35/@base;
+    }
+    .text1 {
+        font-size: 30/@base;
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 14/@base;
+        height:1.5em;
+        line-height: 1.5em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:280/@base;
+        overflow:hidden;
+        display:block;
+        text-decoration:none;
+    }
+    .subtitle{
+      font-size:25/@base;
+      color:#817f82;
+      height:1em;
+      line-height:1em;
+      margin-bottom:15/@base;
+    }
+    .text2,
+    .text4 {
+        font-size: 24/@base;
+        color: #999898;
+        margin-bottom: 10/@base;
+    }
+    .text3 {
+        font-size: 32/@base;
+        color: #f85218;
+        margin-bottom: 14/@base;
+    }
+    .text4 {
+        text-decoration: line-through;
+    }
+    .cart {
+        display: block;
+        width: 78/@base;
+        height: 78/@base;
+        border-radius: 50%;
+        position: absolute;
+        right: 30/@base;
+        bottom: 0/@base;
+        background: #76b357 url("cart.png") no-repeat center center;
+        background-size:60%;
+    }
+    .cart-empty{
+      background-color: transparent;
+      background-image: url("cart-empty.png");
+      background-repeat:  no-repeat;
+      background-size: cover;
+    }
+}
+.module-1:after{
+    display:block;
+    content:'$';
+    height:0;
+    overflow:hidden;
+    clear:both;
+}

@@ -1,0 +1,20 @@
+<div class="moduleVideo">
+	<% for(var i=0;i<list.length;i++){ %>
+		<div class="Video">
+			<iframe id="iframepage" style="margin-bottom: 40px;" src='http://player.youku.com/embed/XMjIxMzg5NDYwNA==' frameborder=0 allowfullscreen></iframe>
+		</div>
+		<script>
+			function changeFrameWidth(){
+			    var ifm= document.getElementById("iframepage");
+			    ifm.width=(document.documentElement.clientWidth)*0.94;
+			    ifm.height=(document.documentElement.clientWidth)*0.54;
+			    ifm.style.marginBottom=0.04*ifm.width;
+			    ifm.style.marginLeft=0.03*ifm.width;
+			}
+			changeFrameWidth();
+			window.onresize=function(){
+			     changeFrameWidth();
+			}
+		</script>
+	<% } %>
+</div>
